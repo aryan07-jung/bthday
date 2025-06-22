@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Romisha 🎂</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #ffc0cb, #ffe4e1);
+            color: #333;
+            overflow-x: hidden;
+        }
+        .container {
+            padding: 30px;
+            text-align: center;
+        }
+        .hidden {
+            display: none;
+        }
+        .title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.5em;
+            margin-top: 50px;
+            color: #e75480;
+            animation: bounceIn 2s ease forwards;
+        }
+        .subtext {
+            font-size: 1.2em;
+            margin: 10px 0 40px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .slideshow {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 0 auto 40px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+        }
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+        .letter {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 40px auto;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            animation: slideUp 1.8s ease-in-out;
+        }
+        .reveal-button {
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 10px;
+            background-color: #ff69b4;
+            color: white;
+            cursor: pointer;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes bounceIn {
+            0% { transform: scale(0.5); opacity: 0; }
+            60% { transform: scale(1.2); opacity: 1; }
+            100% { transform: scale(1); }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="intro">
+        <div class="title">🎉 Happy Birthday My Love of My Life Romisha Koirala 🎉</div>
+        <div class="subtext">Click the button below to open your birthday letters 💝</div>
+        <button class="reveal-button" onclick="revealSurprise()">Click this letter 💌</button>
+    </div>
+
+    <div class="container hidden" id="main-content">
+        <div class="slideshow">
+            <div class="slide"><img src="img/w1.jpeg" alt="Romisha 1"></div>
+            <div class="slide"><img src="img/r.jpeg" alt="Romisha 2"></div>
+            <div class="slide"><img src="img/w2.jpeg" alt="Romisha 3"></div>
+            <div class="slide"><img src="img/w2.png" alt="Romisha 4"></div>
+            <div class="slide"><img src="img/r5.png" alt="Romisha 5"></div>
+            <div class="slide"><img src="img/w5.jpeg" alt="Romisha 6"></div>
+            <div class="slide"><img src="img/r6.jpeg" alt="Romisha 7"></div>
+            <div class="slide"><img src="img/w.jpeg" alt="Romisha 8"></div>
+            <div class="slide"><img src="img/r44.jpeg" alt="Romisha 9"></div>
+            <div class="slide"><img src="img/r.jpeg" alt="Romisha 10"></div>
+        </div>  
+
+        <div class="letter">
+            <h2>💌 A Letter for You</h2>
+            <p>
+                To the most amazing girl in the world,<br><br>
+                From your sweet smile to your kind soul, you make every moment feel special. On your birthday, I just want to say how grateful I am to have you in my life. This little website is a surprise — just like the joy you bring every day. I hope this day is full of love, laughter, and everything you deserve. 🥰<br><br>
+                Love you always,<br>
+                Your Aryan 💘
+            </p>
+        </div>
+
+        <div class="letter">
+            <h2>🌟 You’re My Favorite Everything</h2>
+            <p>
+                Romisha, every moment with you is a beautiful memory in itself. I love you so much meri mayaluuu, Timi life ma aaye dekhe life lai herne najar naii xutai vako cha mero it was nothing special before but right now with you everyday feels like special day, everyday i feel like i wanna love romisha morw everyday i feel like you are the only reason that makes me feel loved and happy babyy thank you. You bring peace to my chaos, light to my darkness, and love to my soul. Thank you for being you. 💗
+            </p>
+        </div>
+
+        <div class="letter">
+            <h2>🎈 Looking Forward</h2>
+            <p>
+                I can’t wait to create more memories with you and yesss we gonna marry in future so lets cherish every bit of your present dww baby we gonna end up being together i promisee and i promise to keep you happy sadhai bhari i love you more and moreeeeeeee and I promise not only in birthdays but harek din special hune harek din ramailo hune xa khusi hune cha maya hune chaaa yess its you me me and our world of loveee . Here's to many more birthdays together. 🥂
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function revealSurprise() {
+            document.getElementById('intro').classList.add('hidden');
+            document.getElementById('main-content').classList.remove('hidden');
+        }
+
+        let slideIndex = 0;
+        const slides = document.getElementsByClassName("slide");
+        function showSlides() {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2000);
+        }
+        showSlides();
+    </script>
+</body>
+</html>
